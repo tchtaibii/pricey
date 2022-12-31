@@ -100,7 +100,7 @@ function ft_change_package(package) {
     o_button.classList.replace('package_on', 'package_off');
     // context
     let mypackage = document.getElementById(package);
-    mypackage.style.display = 'grid';
+    mypackage.style.display = 'flex';
     let opackage = document.getElementById(other);
     opackage.style.display = 'none';
 }
