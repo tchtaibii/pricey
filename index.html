@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pricey</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+	<script src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+</head>
+<style>
+	@font-face {
+		font-family: "CircularStd-Bold";
+		src: url(/font/CircularStd-Bold.ttf);
+	}
+</style>
+
+<body>
+	<!-- container  -->
+	<div class=""
+	style="background-image: url('img/bg_header.svg');background-position: top;background-size: contain; background-repeat: no-repeat; background-color: #F8FBFD;">
+	<!-- nav bar -->
+	<nav class="relative mx-auto w-[70%] py-[55px] flex justify-between items-center ">
+		<a class="" id="logo" href="index.html">
+		<img src="img/logo_header.svg" alt="">
+		</a>
+		<div class="min-[1384px]:hidden">
+			<button class="navbar-burger flex items-center hover:text-[#55B8FF] text-white p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul
+			class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-[1384px]:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-base text-[#27425B] opacity-50 font-[Inter]  font-[500] text-[16px] hover:text-[#27425B] hover:opacity-100"
+				href="#">Home</a></li>
+			<li><a class="text-[#27425B] font-[Inter] opacity-50  font-[500] text-[16px] hover:text-[#27425B] hover:opacity-100"
+				href="">Features</a></li>
+			<li><a class="text-[#27425B] font-[Inter] opacity-50  font-[500] text-[16px] hover:text-[#27425B] hover:opacity-100"
+				href="plans.html">Pricing</a></li>
+			<li><a class="text-[#27425B] font-[Inter] opacity-50  font-[500] text-[16px] hover:text-[#27425B] hover:opacity-100"
+				href="">Testimonials </a></li>
+			<li><a class="text-[#27425B] font-[Inter] opacity-50  font-[500] text-[16px] hover:text-[#27425B] hover:opacity-100"
+				href="">FAQs</a></li>
+		</ul>
+		<div class="flex">
+			<a href="javascript:void(0);" id="icon" onclick="showbar()">
+			<i class="fa fa-bars"></i>
+			</a>
+			<div>
+				<a class="flex-row gap-[7px] hidden lg:flex lg:ml-auto lg:mr-3 justify-center items-center w-[156px] h-[47px] bg-[#236BFF]  border border-[#ffff] hover:bg-[#fff] hover:text-[#236BFF] hover:border border-[#236BFF] text-[16px] text-white font-[Inter] font-[500]  rounded-[23.5px] transition duration-200"
+					href="#" onclick="registre_login('registre-panel')"><img src="img/register.svg"
+					alt="">Register</a>
+			</div>
+			<a class="hidden lg:flex justify-center items-center w-[130px] h-[47px] bg-[#fff] hover:bg-[#236BFF] border border-[#236BFF] hover:text-[#fff] text-[16px] text-[#236BFF] font-[500] rounded-[23.5px] transition font-[Inter]  font-[500] duration-200"
+				href="#" onclick="registre_login('login-panel')">Login</a>
+		</div>
+	</nav>
+	<!-- nav bar mobile -->
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav
+			class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#3081CA] overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+					<img src="img/logo_header.svg" alt="">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-white cursor-pointer hover:text-gray-500"
+						xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-[Inter] font-normal font-semibold text-white hover:bg-[#297ECA] rounded"
+							href="#">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-[Inter] font-normal font-semibold text-white hover:bg-[#297ECA] rounded"
+							href="#">Process</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-[Inter] font-normal font-semibold text-white hover:bg-[#297ECA] rounded"
+							href="#">Features</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-[Inter] font-normal font-semibold text-white hover:bg-[#297ECA] rounded"
+							href="#">Pricing</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-[Inter] font-normal font-semibold text-white hover:bg-[#297ECA] rounded"
+							href="#">Reviews</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div class="pt-6">
+					<a class="font-[Inter] block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-[#34A9FC] hover:bg-blue-700  rounded-xl"
+						href="registre.html">Register</a>
+					<a class="font-[Inter] block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+						href="login.html">Login</a>
+				</div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2022</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+	<div class="panel" id="panel"></div>
+	<div id="login-panel">
+		<img class='xx ' id="xr" src="img/211652_close_icon.png" alt="" onclick="registre_login('x')">
+		<div class="flex">
+			<img src="img/key.svg" alt="">
+			<div class="ml-4">
+				<p class="font-[Inter] font-[500] text-[14px] text-[#236BFF]">Login</p>
+				<h1 style="font-family: 'Circular Std', sans-serif;" class=" font-[Inter] text-[36px] font-[400] leading-tight tracking-tight text-[#1D3042]  dark:text-[#1D3042]">
+					Welcome Back!
+				</h1>
+			</div>
+		</div>
+		<form id='form-lo' class="form" action="">
+			<div class="w-full  md:mt-0 sm:max-w-md xl:p-0 ">
+				<div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-6">
+		<form class="space-y-4 md:space-y-6" action="#">
+		<div>
+		<label for="email"
+			class="block mb-2 text-sm font-[Inter] font-[500] text-[#1B212D] dark:text-[#1B212D]">Your
+		Email</label>
+		<div class="flex items-center border border-[#CCD2D8] py-2 px-3 rounded-[10px] mb-4">
+		<img src="img/Envelope.svg" alt="">
+		<input
+			class="pl-2 w-full border-none placeholder:text-[#DDDDE2] placeholder:font-[Inter] "
+			type="text" name="" id="" placeholder="Enter your email address" />
+		</div>
+		</div>
+		<div>
+		<label for="email"
+			class="block mb-2 text-sm font-[Inter] font-[500] text-[#1B212D] dark:text-[#1B212D]">Your
+		Password</label>
+		<div class="flex items-center border border-[#CCD2D8] py-2 px-3 rounded-[10px] mb-4">
+		<img src="img/keypass.svg" alt="">
+		<input
+			class="pl-2 w-full border-none placeholder:text-[#DDDDE2] placeholder:font-[Inter]"
+			type="password" name="" id="" placeholder="********" />
+		</div>
+		</div>
+		<div class="w-full text-right">
+		<a class="" href="">Forgot your password?</a>
+		</div>
+		<div class="relative items-center flex w-full flex-wrap mb-10">
+		<button type="submit"
+			class="mb-8 w-full text-white bg-[#236BFF] hover:bg-[#236BFF] focus:ring-4 focus:outline-none focus:ring-primary-300 font-[Inter] font-[500] rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+		Sign in →
+		</button>
+		<img src="img/et.svg" alt="" class="mb-8">
+		<button type="submit"
+			class="grid place-content-center  mb-8 w-full border border-[#CCD2D8] bg-[#ffff] hover:bg-[#fff] focus:ring-4 focus:outline-none focus:ring-primary-300 font-[Inter] font-[500] rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+		<div class="flex items-center space-x-2">
+		<img src="img/Google_icon.svg" alt="">
+		<p class="text-[#78778B]">Sign in with google</p>
+		</div>
+		</button>
+		</div>
+		<p class="text-[14px] font-[Inter] font-[400] text-[#929EAE] leading-[17px] text-center">
+		Don’t have an account?<a href="login.html"
+			class="text-[#236BFF] text-[14px] font-[Inter] font-[500] underline"> Click here to
+		register</a>
+		</p>
+		</form>
+		</div>
+		</div>
+		</form>
+	</div>
+	<!-- registre panel -->
+	<div style="height: 751px" id="registre-panel">
+		<img class='xx ' id="x" src="img/211652_close_icon.png" alt="" onclick="registre_login('x')">
+		<div class="flex">
+			<img src="img/key.svg" alt="">
+			<div class="ml-4">
+				<p class="font-[Inter] font-[500] text-[14px] text-[#236BFF]">Register</p>
+				<h1 style="font-family: 'Circular Std', sans-serif;" class="text-[36px] font-[400] leading-tight tracking-tight text-[#1D3042]  dark:text-[#1D3042]">
+					Experience Pricey
+				</h1>
+			</div>
+		</div>
+		<form id='form-lo' class="form" action="">
+			<div class="w-full  md:mt-0 sm:max-w-md xl:p-0 ">
+				<div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-6">
+		<form class="space-y-4 md:space-y-6" action="#">
+		<div>
+		<label for="email"
+			class="block mb-2 text-sm font-[Inter] font-[500] text-[#1B212D] dark:text-[#1B212D]">Your
+		Email</label>
+		<div class="flex items-center border border-[#CCD2D8] py-2 px-3 rounded-[10px] mb-4">
+		<img src="img/Envelope.svg" alt="">
+		<input
+			class="pl-2 w-full border-none placeholder:text-[#DDDDE2] placeholder:font-[Inter]"
+			type="text" name="" id="" placeholder="Enter your email address" />
+		</div>
+		</div>
+		<div>
+		<label for="email"
+			class="block mb-2 text-sm font-[Inter] font-[500] text-[#1B212D] dark:text-[#1B212D]">Your
+		Password</label>
+		<div class="flex items-center border border-[#CCD2D8] py-2 px-3 rounded-[10px] mb-4">
+		<img src="img/keypass.svg" alt="">
+		<input
+			class="pl-2 w-full border-none placeholder:text-[#DDDDE2] placeholder:font-[Inter]"
+			type="password" name="" id="" placeholder="********" />
+		</div>
+		</div>
+		<div>
+		<label for="email"
+			class="block mb-2 text-sm font-[Inter] font-[500] text-[#1B212D] dark:text-[#1B212D]">Confirm
+		Password</label>
+		<div class="flex items-center border border-[#CCD2D8] py-2 px-3 rounded-[10px] mb-4">
+		<img src="img/keypass.svg" alt="">
+		<input
+			class="pl-2 w-full border-none placeholder:text-[#DDDDE2] placeholder:font-[Inter]"
+			type="password" name="" id="" placeholder="********" />
+		</div>
+		</div>
+		<div class="relative items-center flex w-full flex-wrap mb-10">
+		<button type="submit"
+			class="mb-8 w-full text-white bg-[#236BFF] hover:bg-[#236BFF] focus:ring-4 focus:outline-none focus:ring-primary-300 font-[Inter] font-[500] rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+		Register →
+		</button>
+		<img src="img/et.svg" alt="" class="mb-8">
+		<button type="submit"
+			class="grid place-content-center  mb-8 w-full border border-[#CCD2D8] bg-[#ffff] hover:bg-[#fff] focus:ring-4 focus:outline-none focus:ring-primary-300 font-[Inter] font-[500] rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+		<div class="flex items-center space-x-2">
+		<img src="img/Google_icon.svg" alt="">
+		<p class="text-[#78778B]">Register with google</p>
+		</div>
+		</button>
+		</div>
+		<p class="text-[14px] font-[Inter] font-[400] text-[#929EAE] leading-[17px] text-center">
+		Already have an account? <a href="login.html"
+			class="text-[#236BFF] text-[14px] font-[Inter] font-[500] underline">Click here to
+		Login</a>
+		</p>
+		</form>
+		</div>
+		</div>
+		</form>
+	</div>
+	<!-- content 1 -->
+	<section id="content1" data-aos="fade-in" class="lg:pt-[30px]">
+		<div class="c1">
+			<div class="tag">
+				<span class="mr-2">
+					<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M14.1855 11.3365C13.9804 11.5352 13.8862 11.8226 13.9329 12.1044L14.6367 15.9994C14.6961 16.3295 14.5567 16.6636 14.2805 16.8544C14.0097 17.0523 13.6495 17.0761 13.3542 16.9178L9.84791 15.089C9.72599 15.0241 9.59062 14.9893 9.45208 14.9853H9.23753C9.16312 14.9964 9.09028 15.0201 9.02379 15.0565L5.5167 16.894C5.34333 16.9811 5.14699 17.012 4.95462 16.9811C4.48595 16.8924 4.17324 16.4459 4.25003 15.9749L4.95462 12.0799C5.00133 11.7957 4.90712 11.5067 4.70208 11.3048L1.84337 8.534C1.60428 8.30205 1.52116 7.95371 1.63041 7.63942C1.73649 7.32592 2.00724 7.09713 2.3342 7.04567L6.26878 6.47488C6.56803 6.444 6.83087 6.26192 6.96545 5.99275L8.6992 2.43817C8.74037 2.359 8.79341 2.28617 8.85753 2.22442L8.92878 2.169C8.96599 2.12784 9.00874 2.0938 9.05624 2.06609L9.14253 2.03442L9.27712 1.979H9.61041C9.90808 2.00988 10.1701 2.188 10.3071 2.454L12.0638 5.99275C12.1905 6.25163 12.4367 6.43134 12.7209 6.47488L16.6555 7.04567C16.988 7.09317 17.2658 7.32275 17.3759 7.63942C17.4796 7.95688 17.3901 8.30521 17.1463 8.534L14.1855 11.3365Z"
+							fill="white" />
+					</svg>
+				</span>
+			</div>
+			<div class="textcash mt-4 mb-[45px]">
+				<h1 style=" font-family: 'Circular Std', sans-serif;" class="text-[#1D3042]  font-[400] text-[72px] leading-[115%] w-[572px] tracking-[-0.03em] ">
+					Automated & <br> optimal pricing <br> for <span class="project text-[#236BFF]"> projects.</span>
+					<svg class="line">
+						<path d="M4 14.6875C51.9338 6.38331 127.231 -1.42912 261.459 9.86171"></path>
+					</svg>
+				</h1>
+			</div>
+			<div class="">
+				<img class="imgcash " src="img/Group 1000002413.svg" alt="">
+			</div>
+			<p class="c1p" id="p1t">Provided by the latest technologies and years of know-how! Pricey automatically
+				collects price data from the best-known e-commerce shops in Switzerland & Germany.
+			</p>
+			<div class="bc1 mx-auto gap-0 columns-2 xl:mx-0 space-x-[-60px]">
+				<button class="g_s flex flex-row justify-center items-center font-[Inter] text-[1rem] color-[#FFFFFF] w-[180px] h-[53px] bg-[#236BFF] rounded-[40px] text-white shadow-[0px 5px 10px rgba(174, 174, 174, 0.15)]">
+					Get Started
+				</button>
+				<button class="l_m hover:bg-[#236BFF] hover-border border-[#55B8FF] hover:rounded-[40px] hover:text-[#fff] flex flex-row justify-center items-center font-[Inter] text-[1rem] w-[11.938rem] h-[3.625rem] rounded-[1.875rem] text-[#767F91]">
+					Learn More
+					<span class="ml-4">
+						<img src="img/arrow_bo.svg" alt="">
+					</span>
+				</button>
+			</div>
+			<div class="rev mt-[70px] mb-[70px]">
+				<img src="img/review.svg" alt="" width="80%">
+			</div>
+		</div>
+		<div class="c2 w-[50.6%]">
+			<img src="img/hero_img.svg" alt="" class="w-full">
+		</div>
+	</section>
+	</div>
+	<!-- ====== Brands Section Start -->
+	<section class="brands_img py-20 lg:py-[120px] mb-[-160px]" data-aos="fade-up">
+			<div class=" mx-auto">
+				<div class=" flex flex-wrap">
+					<div class="w-full px-4">
+						<div class="flex flex-wrap items-center justify-center space-x-[50px]">
+							<div class="brand1 flex space-x-12">
+								<img class="lg1" src="img/brand1.svg" alt="image"/>
+								<img class="lg2" src="img/brand2.svg" alt="image"/>
+							</div>
+							<div class="brand2 flex space-x-12">
+								<img class="lg3" src="img/brand3.svg" alt="image"/>
+								<img class="lg4" src="img/brand4.svg" alt="image"/>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section>
+	<!-- ====== Brands Section end -->
+	<!-- ====== features Section start -->
+	<section class="features w-full  flex flex-col mx-auto items-center  overflow-x-hidden">
+		<div data-aos="fade-up" class="flex flex-col items-center justify-start mt-[100px] mb-[100px] space-y-4">
+			<div class="bg-[#307ef31a] px-[1.063rem] items-center py-[0.25rem] font-[Inter] text-[0.75rem] w-[90px] h-[24px] text-[#236BFF] rounded-[12px]">
+				FEATURES
+			</div>
+			<h2_s style="color: #1D3042;font-family: 'Circular Std', sans-serif;">
+				Take sales to the<span style="font-weight: 700;"> next level!</span>
+			</h2_s>
+			<h6_s style="font-family: 'Circular Std', sans-serif;" class="mt-[12px] mb-[26px] text-[#23293D] opacity-0.5 text-center font-[400]">
+				Pricey collects price data from the largest e-commerce shops in <br> Switzerland & Germany to enable
+				fully automatic & optimal pricing.
+			</h6_s>
+		</div>
+	</section>
+	<section id="Features" class="flex flex-col justify-center mx-auto w-full mb-[137px] items-start h-fit"
+		data-aos="fade-up">
+		<div class="r1 flex xl:flex-row flex-col items-center w-full xl:items-start justify-center md:mb-[1.563rem] mb-0">
+			<div id="box1" class="c3-box mb-[1.563rem] border border-[#EDF1F5]">
+				<div class=" flex flex-col justify-start items-start my-[22px]">
+					<img src="img/Featured icon.svg" alt="">
+				</div>
+				<h2> Compliance</h2>
+				<p id="pb1" class="mb-4"> Pricey capitalizes on Dataprotection & Respect <br> We do not store important personal
+					Information. 
+				</p>
+				<h4 class="font-[Inter] font-[600] text-[#27425B] text-[16px]">Learn More ➔</h4>
+			</div>
+		<div class="c3-box mb-[1.563rem] border border-[#EDF1F5]">
+			<div class="flex flex-col justify-start items-start my-[22px]">
+				<img src="img/Featured icon2.svg" alt="">
+			</div>
+			<h2>Restful API access</h2>
+			<p class="mb-4">You can integrate our service into your systems & fully automate the pricing process.
+			</p>
+			<h4 class="font-[Inter] font-[600] text-[#27425B] text-[16px]">Learn More ➔</h4>
+		</div>
+		<div class="c3-box border border-[#EDF1F5]">
+			<div class="flex flex-col justify-start items-start my-[22px]">
+				<img src="img/Featured icon3.svg" alt="">
+			</div>
+			<h2 class="mb-[40px]">Restful API access</h2>
+			<p class="mb-4">Pricey is under constant further development and thus constantly offers new modules!</p>
+			<h4 class="font-[Inter] font-[600] text-[#27425B] text-[16px]">Learn More ➔ </h4>
+		</div>
+	</section>
+	<!-- ====== features Section end -->
+
+	<div class="w-full flex flex-col items-center mx-auto">
+        <div class="suitable_pack  h-[2469px] min-[1377px]:h-[1136px] pt-[5.313rem]">
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 12px;"
+                class="px-[1.063rem] py-[0.25rem] font-[Inter] text-[0.75rem] w-[5rem] h-[1.5rem] text-white">PRICING
+            </div>
+            <h2_s style="width: 427px;">A suitable package for everyone</h2_s>
+            <h6_s style="margin-bottom: 26px">Can be canceled at any time, flexible packages!</h6_s>
+            <div class="mon-year mb-[29px]">
+                <div style="background: #236BFF;border: 1px solid #E1E1E1;border-radius: 30px;"
+                    class=" flex flex-row justify-between items-center gap-[3px] w-[13.625rem] h-[3.75rem] px-[0.625rem] py-[0.563rem]">
+                    <a id="monthly_b" onclick="ft_change_package('monthly')" for="tab-1" class="package_off">Monthly</a>
+                    <a id="yearly_b" onclick="ft_change_package('yearly')" for="tab-2" class="package_on">Yearly</a>
+                </div>
+            </div>
+            
+        </div>
+        <div style="z-index: 2;border-radius: 40px;overflow-y: visible;"
+                class="w-[1368px] h-[895px] min-[1377px]:mt-[-663px] mt-[-2010px] gap-[25px] min-[1377px]:gap-0 items-center flex flex-col min-[1377px]:bg-white bg-transparent">
+                <div id="yearly" class="flex  min-[1377px]:flex-row min-[1377px]:gap-[0]  gap-[25px] flex-col justify-between ">
+                    <div style="border-right: 1px dashed #E1E1E1;" class="comp_pack flex flex-col h-[715px] w-[458px] pt-[48px] pl-[51px]">
+                        <svg class="mb-[28px]" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="25" fill="#EAF2FE"></circle>
+                            <path
+                                d="M30.9095 23.7199H27.8195V16.5199C27.8195 14.8399 26.9095 14.4999 25.7995 15.7599L24.9995 16.6699L18.2295 24.3699C17.2995 25.4199 17.6895 26.2799 19.0895 26.2799H22.1795V33.4799C22.1795 35.1599 23.0895 35.4999 24.1995 34.2399L24.9995 33.3299L31.7695 25.6299C32.6995 24.5799 32.3095 23.7199 30.9095 23.7199Z"
+                                fill="#B19AF8"></path>
+                        </svg>
+                        <hg class="min-[488px]:text-[26px] text-[18px]">Starter Pack</hg>
+                        <h6g class="min-[488px]:text-[17.5224px] text-[12px] min-[488px]:mb-[15px] mb-[3px] min-[488px]:w-[355px] w-[201px]">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry.
+                        </h6g>
+                        <div class="mt-[60px] mb-[6px] flex flex-row items-baseline gap-[8px] ">
+                            <price>₣2,296</price>
+                            <span
+                                style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 24px;letter-spacing: -0.05em;opacity: 0.5;">/
+                                Year</span>
+                        </div>
+                        <h6g>For 500 Products</h6g>
+                        <a href="" style="background: #236BFF; border-radius: 12px;"
+                            class="flex justify-center items-center w-[180px] h-[64px] mt-[30px] font-[Inter] mb-[56px] text-[18px] text-600 text-white">
+                            Get Started</a>
+                        <div class="flex flex-col gap-[22px]">
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    500 Products
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    24 Hrs Price update
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    API Access
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    Default Support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-right: 1px dashed #E1E1E1;" class="comp_pack flex flex-col h-[715px] min-[488px]:w-[458px] w-[273px] pt-[48px] pl-[51px]">
+                        <div class="flex flex-row justify-between w-[full]  mb-[28px]">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="25" fill="#E28165" fill-opacity="0.2"></circle>
+                                <path
+                                    d="M30.84 20.97L30.7 20.9L29.34 20.12L26.52 18.49C25.66 17.99 24.34 17.99 23.48 18.49L20.66 20.11L19.3 20.91L19.12 21C17.37 22.18 17.25 22.4 17.25 24.29V28.81C17.25 30.7 17.37 30.92 19.16 32.13L23.48 34.62C23.91 34.88 24.45 34.99 25 34.99C25.54 34.99 26.09 34.87 26.52 34.62L30.88 32.1C32.64 30.92 32.75 30.71 32.75 28.81V24.29C32.75 22.4 32.63 22.18 30.84 20.97ZM27.79 26.5L27.18 27.25C27.08 27.36 27.01 27.57 27.02 27.72L27.08 28.68C27.12 29.27 26.7 29.57 26.15 29.36L25.26 29C25.12 28.95 24.89 28.95 24.75 29L23.86 29.35C23.31 29.57 22.89 29.26 22.93 28.67L22.99 27.71C23 27.56 22.93 27.35 22.83 27.24L22.21 26.5C21.83 26.05 22 25.55 22.57 25.4L23.5 25.16C23.65 25.12 23.82 24.98 23.9 24.86L24.42 24.06C24.74 23.56 25.25 23.56 25.58 24.06L26.1 24.86C26.18 24.99 26.36 25.12 26.5 25.16L27.43 25.4C28 25.55 28.17 26.05 27.79 26.5Z"
+                                    fill="#E28165"></path>
+                            </svg>
+                            <div style="background: #236BFF;border: 1px solid #B198F8;border-radius: 25.5px 0px 0px 25.5px;letter-spacing: -0.05em;"
+                                class="min-[1377px]:flex hidden flex-row gap-[4px] font-[Inter] items-center justify-center  text-[17.5224px] w-[172px] h-[50px] text-500 text-white">
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.54894 0.927048C6.8483 0.00573778 8.1517 0.0057404 8.45106 0.927051L9.40837 3.87336C9.54224 4.28538 9.9262 4.56434 10.3594 4.56434H13.4574C14.4261 4.56434 14.8289 5.80395 14.0451 6.37336L11.5389 8.19427C11.1884 8.44892 11.0417 8.90028 11.1756 9.31231L12.1329 12.2586C12.4323 13.1799 11.3778 13.946 10.5941 13.3766L8.08778 11.5557C7.7373 11.3011 7.2627 11.3011 6.91221 11.5557L4.40594 13.3766C3.62222 13.946 2.56774 13.1799 2.8671 12.2586L3.82441 9.3123C3.95828 8.90028 3.81162 8.44892 3.46114 8.19427L0.954859 6.37335C0.171145 5.80395 0.573923 4.56434 1.54265 4.56434H4.64057C5.0738 4.56434 5.45776 4.28538 5.59163 3.87336L6.54894 0.927048Z"
+                                        fill="white"></path>
+                                </svg>
+                                Most Popular
+                            </div>
+                        </div>
+                        <hg class="min-[488px]:text-[26px] text-[18px]">Business Package</hg>
+                        <h6g class="min-[488px]:text-[17.5224px] text-[12px] min-[488px]:mb-[15px] mb-[3px] min-[488px]:w-[355px] w-[201px]">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry.
+                        </h6g>
+                        <div class="mt-[60px] mb-[6px] flex flex-row items-baseline gap-[8px] ">
+                            <price class="min-[488px]:text-[60px] text-[35px]">₣10,695</price>
+                            <span class="min-[488px]:text-[18px] text-[10px]"
+                                style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 24px;letter-spacing: -0.05em;opacity: 0.5;">/
+                                Year</span>
+                        </div>
+                        <h6g class="min-[488px]:text-[17.5224px] text-[12px]">For 5,000 Products</h6g>
+                        <a href="" style="background: #236BFF; border-radius: 12px;"
+                            class="flex justify-center items-center min-[488px]:rounded-[12px] rounded-[5px] min-[488px]:w-[180px] w-[111px] h-[36px] min-[488px]:h-[64px] mt-[30px] font-[Inter] mb-[56px] text-[12px] min-[488px]:text-[18px] text-600 text-white">
+                            Get Started</a>
+                        <div class="flex flex-col gap-[22px]">
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    500 Products
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    30 Min Price update
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    API Access
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    Default Support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comp_pack flex flex-col h-[715px] w-[458px] pt-[48px] pl-[51px]">
+                        <svg class="mb-[28px]" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="25" fill="#D1A548" fill-opacity="0.2"></circle>
+                            <path
+                                d="M34.09 19.98C33.24 19.04 31.82 18.57 29.76 18.57H29.52V18.53C29.52 16.85 29.52 14.77 25.76 14.77H24.24C20.48 14.77 20.48 16.86 20.48 18.53V18.58H20.24C18.17 18.58 16.76 19.05 15.91 19.99C14.92 21.09 14.95 22.57 15.05 23.58L15.06 23.65L15.1375 24.4633C15.1518 24.6131 15.2324 24.7484 15.3583 24.8307C15.5981 24.9877 15.9995 25.2464 16.24 25.38C16.38 25.47 16.53 25.55 16.68 25.63C18.39 26.57 20.27 27.2 22.18 27.51C22.27 28.45 22.68 29.55 24.87 29.55C27.06 29.55 27.49 28.46 27.56 27.49C29.6 27.16 31.57 26.45 33.35 25.41C33.41 25.38 33.45 25.35 33.5 25.32C33.8968 25.0958 34.3083 24.8195 34.6835 24.5489C34.7965 24.4673 34.8688 24.3413 34.8842 24.2028L34.9 24.06L34.95 23.59C34.96 23.53 34.96 23.48 34.97 23.41C35.05 22.4 35.03 21.02 34.09 19.98ZM26.09 26.83C26.09 27.89 26.09 28.05 24.86 28.05C23.63 28.05 23.63 27.86 23.63 26.84V25.58H26.09V26.83ZM21.91 18.57V18.53C21.91 16.83 21.91 16.2 24.24 16.2H25.76C28.09 16.2 28.09 16.84 28.09 18.53V18.58H21.91V18.57Z"
+                                fill="#D1A548"></path>
+                            <path
+                                d="M33.8733 26.7341C34.2269 26.5659 34.6342 26.8462 34.5988 27.2361L34.2398 31.19C34.0298 33.19 33.2098 35.23 28.8098 35.23H21.1898C16.7898 35.23 15.9698 33.19 15.7598 31.2L15.4191 27.4521C15.3841 27.0667 15.782 26.7867 16.1347 26.9463C17.2741 27.4618 19.3772 28.3764 20.6764 28.7166C20.8407 28.7597 20.9736 28.8773 21.0456 29.0311C21.6525 30.3292 22.969 31.02 24.8698 31.02C26.752 31.02 28.085 30.3026 28.694 29.0013C28.766 28.8474 28.8991 28.7298 29.0635 28.6865C30.443 28.3235 32.6816 27.3012 33.8733 26.7341Z"
+                                fill="#D1A548"></path>
+                        </svg>
+                        <hg>Enterprise Package</hg>
+                        <h6g style="width: 355px;margin-top: 15px;">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry.
+                        </h6g>
+                        <div class="mt-[60px] mb-[6px] flex flex-row items-baseline gap-[8px] ">
+                            <price>₣23,799</price>
+                            <span
+                                style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 24px;letter-spacing: -0.05em;opacity: 0.5;">/
+                                Month</span>
+                        </div>
+                        <h6g>For 20,000 Products</h6g>
+                        <a href="" style="background: #236BFF; border-radius: 12px;"
+                            class="flex justify-center items-center w-[180px] h-[64px] mt-[30px] font-[Inter] mb-[56px] text-[18px] text-600 text-white">
+                            Get Started</a>
+                        <div class="flex flex-col gap-[22px]">
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    20 000 Products
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    10 Min Price update
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    API Access
+                                </a>
+                            </div>
+                            <div class="flex flex-row ">
+                                <a class="gap-[13px] flex items-center" href="">
+                                    <svg style="display: inline;" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#307EF3" fill-opacity="0.1"></circle>
+                                        <path
+                                            d="M12.5927 9.74581L11.3039 8.76086L9.20379 7.15593C8.75891 6.82095 8 7.06094 8 7.54091V10.6558V13.4606C8 13.9406 8.75891 14.1806 9.20379 13.8406L12.5927 11.2507C13.1358 10.8408 13.1358 10.1608 12.5927 9.74581Z"
+                                            fill="#236BFF"></path>
+                                    </svg>
+                                    Enterpise Support
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- end -->
+                <div style="background: #FFFFFF;border: 1px solid rgba(225, 225, 225, 0.5); box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.03);"
+                    class="min-[1377px]:w-full w-[458px] py-[47px] min-[1377px]:rounded-t-none min-[1377px]:rounded-b-[40px] rounded-[20px] px-[50px] min-[1377px]:pl-[55px] min-[1377px]:pr-[123px]">
+                    <div class="flex min-[1377px]:flex-row flex-col min-[1377px]:gap-0  gap-[50px] items-center justify-around min-[1377px]:justify-between">
+                        <div class="flex flex-col gap-[8px] items-center min-[1377px]:items-start w-[458px] min-[1377px]:w-[844px]">
+                            <hg>Custom Package</hg>
+                            <h6_s style=" color: #23293D;line-height: 25px;" class="min-[1377px]:text-start text-center h-[52px]">Lorem Ipsum is simply
+                                dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                text
+                                ever since the 1500s,
+                            </h6_s>
+                        </div>
+                        <a style="height: 64px;border: 1px solid #236BFF;border-radius: 12px;" href=""
+                            class="font-[Inter] text-[18px] text-600 text-[#236BFF] flex flex-row gap-[13px] py-[20px] px-[36px] items-center justify-center">
+                            Contact
+                            Us
+                            <svg width="19" height="14" viewBox="0 0 19 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9297 1L17.9997 7.07L11.9297 13.14" stroke="#236BFF" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M1 7.07031H17.83" stroke="#236BFF" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+	<div class="container_ mx-auto container mt-[1460px] min-[1377px]:mt-[-21px]">
+		<section
+			style="background-color: white; background-image: url('img/background2.svg'); background-size: 100%;background-repeat: no-repeat;"
+			class="reviews w-[100%]  flex flex-col mx-auto items-center pt-[117px] overflow-x-hidden">
+			<div style="background: rgba(48, 126, 243, 0.1); border-radius: 12px;"
+				class="px-[1.063rem] py-[0.25rem] font-[Inter] text-[0.75rem] w-[5rem] h-[1.5rem] text-[#236BFF]">
+				REVIEWS
+			</div>
+			<h2_s style="color: #1D3042;">
+				What clients say <span style="font-weight: 700;">about us?</span>
+			</h2_s>
+			<h6_s style="margin-top: 12px;margin-bottom: 26px; color: #23293D;opacity: 0.5;">Read what clients say about
+				our services.
+			</h6_s>
+			<!-- SLIDER -->
+			<div class="section second_slider ">
+				<div class="container">
+					<div class="row" style="justify-content: center;">
+						<div class="column">
+							<div class="slick-slider slick-list slider2 swiper-inner">
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="swiper-slide content">
+										<div class="flex flex-row items-center  justify-between">
+											<div class="flex flex-row items-center gap-[20px]">
+												<svg width="61" height="61" viewBox="0 0 61 61" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_698_6723)">
+														<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+															fill="#FFC108" />
+														<rect x="0.9375" y="0.760742" width="30" height="60"
+															fill="white" />
+														<rect x="0.9375" y="30.7607" width="60" height="30"
+															fill="#008DFF" />
+													</g>
+													<defs>
+														<clipPath id="clip0_698_6723">
+															<rect x="0.9375" y="0.760742" width="60" height="60" rx="30"
+																fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<div
+													class="flex flex-col items-start font-[Inter] text-600 text-[22px] leading-4 tracking-tighter text-[#1D3042]">
+													Jhon Doe <span
+														style="font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 18px;line-height: 32px;letter-spacing: -0.05em;color: rgba(39, 66, 91, 0.5);">Co
+														Founder of Pricey</span>
+												</div>
+											</div>
+											<svg width="51" height="44" viewBox="0 0 51 44" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M50.3617 1.18155L49.1144 10.0685C46.6198 9.86066 44.5929 10.2764 43.0338 11.3158C41.4747 12.3033 40.3833 13.7585 39.7597 15.6814C39.188 17.5523 39.084 19.7351 39.4478 22.2297H50.3617V43.4338H29.1576V22.2297C29.1576 14.7459 30.8986 9.0811 34.3807 5.23527C37.8627 1.33746 43.1897 -0.0137814 50.3617 1.18155ZM22.1416 1.18155L20.8943 10.0685C18.3997 9.86066 16.3728 10.2764 14.8137 11.3158C13.2546 12.3033 12.1632 13.7585 11.5395 15.6814C10.9679 17.5523 10.8639 19.7351 11.2277 22.2297H22.1416V43.4338H0.9375V22.2297C0.9375 14.7459 2.67852 9.0811 6.16056 5.23527C9.6426 1.33746 14.9696 -0.0137814 22.1416 1.18155Z"
+													fill="#DBE5FA" />
+											</svg>
+										</div>
+										<div class="w-full flex justify-center items-center pl-[82px]">
+											<h6_s style="color: #23293D; width: 447px;height: 70px;">Aliqua id fugiat
+												nostrud irure ex
+												duis
+												ea quis id quis ad et Sunt qui esse pariatur duis deserunt mollit dolore
+												cillum.
+											</h6_s>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- SLIDER -->
+			<svg width="44" height="12" viewBox="0 0 44 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="6" cy="6" r="6" fill="#DBE5FA" />
+				<circle cx="22" cy="6" r="5.5" stroke="#DBE5FA" />
+				<circle cx="38" cy="6" r="5.5" stroke="#DBE5FA" />
+			</svg>
+		</section>
+	</div>
+
+		<!-- <div class="container lg:mb-[100px]">
+			<section class="">
+				<div class=" ">
+					<div class="mt-12 space-y-8">
+						<h4 class="md:text-[2.625rem] text-[1.5rem] mb-[-1.2rem] md:leading-[3.125rem] leading-[2rem] text-center text-[#ffff] dark:text-[#ffff] font-semibold font-[Rubik]"></h4>
+						<h1 class="md:text-[1.125rem] text-[0.7rem] leading[1.625rem] tracking-[-0.04em] text-center text-[#757095] font-[Manrope]"></h1>
+						<br>
+						<div class="faq1 flex  lg:space-x-5 lg:ml-10">
+							<div class="f1">
+								<div class=" bg-[#fff] border-2 border-[#0000001A] rounded-[16px]  lg:w-[688px]">
+								<button class="flex items-center justify-between w-full p-8" onclick="ft_sc('psc1', 'svg1')">
+									<h1 class="font-[Inter] text-[22px] font-[400]	text-[#1D3042] leading-8" style="font-family: 'Circular Std', sans-serif;">Can you test Pricey for free?</h1>
+									<span class="text-white  rounded-full">
+										<svg id="svg1" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.75 1L1.25 1" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>										
+									</span>
+								</button>
+								<p  id="psc1" class="font-[Inter] font-[400] p-8 text-[1rem] leading-[1.75rem] text-[#767F91]" style="margin-top: -50px; display: none;">
+									YES! Each user can add up to 10 products and thus test the service. It is important to use correct EAN numbers or manufacturer article numbers in order to achieve satisfactory results.							
+								</div>
+							</div>							
+							<div class="f2">
+								<div class=" bg-[#fff] border-2 border-[#0000001A] rounded-[16px]  lg:w-[688px]">
+								<button class="flex items-center justify-between w-full p-8" onclick="ft_sc('psc2', 'svg2')">
+									<h1 class="font-[Inter] text-[22px] font-[400]	text-[#1D3042] leading-8" style="font-family: 'Circular Std', sans-serif;">Which E-commerce shops are scanned/scraped?</h1>
+									<span class="text-white  rounded-full">
+										<svg id="svg2" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.75 1L1.25 1" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>										
+									</span>
+								</button>
+								<p  id="psc2" class="font-[Inter] font-[400] p-8 text-[1rem] leading-[1.75rem] text-[#767F91]" style="margin-top: -50px; display: none;">
+									Galaxus CH & DE, Mediamarkt CH & DE, Saturn DE and Microspot CH are currently being scraped. More modules are constantly being added.							</div>
+							</div>
+							
+						</div>	
+						<div class="faq2 flex lg:space-x-5  lg:ml-10">
+							<div class="f3">
+								<div class="bg-[#fff] border-2 border-[#0000001A] rounded-[16px]  lg:w-[688px]">
+									<button class="flex items-center justify-between w-full p-8" onclick="ft_sc('psc3', 'svg3')">
+										<h1 class="font-[Inter] text-[22px] font-[400]	text-[#1D3042] leading-8" style="font-family: 'Circular Std', sans-serif;">How can I connect Pricey directly to my ERP system?</h1>
+										<span class="text-white  rounded-full">
+											<svg id="svg3" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.75 1L1.25 1" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>										
+										</span>
+									</button>
+									<p  id="psc3" class="font-[Inter] font-[400] p-8 text-[1rem] leading-[1.75rem] text-[#767F91]" style="margin-top: -50px; display: none;">
+										With the help of our API interface you can connect our service to any ERP system. 
+										We would be happy to create an optimal solution for you. Please contact us.								
+									</div>
+							</div>
+						<div class="f4">
+								<div class="bg-[#fff] border-2 border-[#0000001A] rounded-[16px]  lg:w-[688px]">
+									<button class="flex items-center justify-between w-full p-8" onclick="ft_sc('psc4', 'svg4')">
+										<h1 class="font-[Inter] text-[22px] font-[400]	text-[#1D3042] leading-8" style="font-family: 'Circular Std', sans-serif;">Can I order additional product capacity?</h1>
+										<span class="text-white  rounded-full">
+											<svg id="svg4" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.75 1L1.25 1" stroke="#121313" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>										
+										</span>
+									</button>
+									<p  id="psc4" class="font-[Inter] font-[400] p-8 text-[1rem] leading-[1.75rem] text-[#767F91]" style="margin-top: -50px; display: none;">
+										Feel free to contact us to request a custom package. marco.capuano@starux.ch
+									</div>
+						</div>					
+					</div>
+					
+				</div>
+			</section>
+			<div>
+				<p class="text-[#236BFF] font-[Inter] font-[500] text-[18px] text-center mt-16">More Questions? Contact Us →</p>
+			</div>
+		</div>
+		</div> -->
+		<footer class=" lg:w-full bg-[#F8FBFD] lg:h-[200px] mt-[117px] min-[1377px]:gap-[600px] gap-[200px] lg:flex lg:flex-row lg:justify-center lg:items-end lg:px-[258px] lg:py-[60px]">
+			<div class="flex flex-col gap-[29px] items-start justify-center ">
+				<img id="img_footer" src="img/logo_header.svg" alt="">
+				<h5 id="droit" style="white-space: nowrap;" class="font-[Inter] text-[#93A0AD] tracking-tighter">© Pricey 2022. All
+					rights reserved.
+				</h5>
+			</div>
+			<ul id="footer_menu" class="flex flex-row gap-[48px] items-start ">
+				<li><a class="font-[Inter] text-[#909FAC] tracking-tighter font-400" href="">Home</a></li>
+				<li><a class="font-[Inter] text-[#909FAC] tracking-tighter font-400" href="">Features</a></li>
+				<li><a class="font-[Inter] text-[#909FAC] tracking-tighter font-400" href="">Pricing</a></li>
+				<li><a class="font-[Inter] text-[#909FAC] tracking-tighter font-400" href="">Testimonials</a>
+				</li>
+				<li><a class="font-[Inter] text-[#909FAC] tracking-tighter font-400" href="">FAQs</a></li>
+			</ul>
+		</footer>
+	<script src="script.js"></script>
+</body>
+
+
+</html>
